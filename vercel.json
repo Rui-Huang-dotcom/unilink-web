@@ -1,6 +1,10 @@
 {
   "version": 2,
-  "builds": [{ "src": "backend/api/server.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/api/submit-form", "dest": "/backend/api/server.js" }],
-  "rewrites": [{ "source": "/property/:id", "destination": "/index.html" }]
+  "builds": [
+    { "src": "backend/api/server.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/submit-form", "dest": "/backend/api/server.js" },
+    { "src": "/property/(.*)", "dest": "/index.html" }
+  ]
 }
