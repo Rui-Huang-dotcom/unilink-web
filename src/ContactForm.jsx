@@ -24,7 +24,7 @@ export default function ContactForm() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5001/submit-form", {
+      const response = await fetch("/api/submit-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
