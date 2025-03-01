@@ -1,7 +1,8 @@
 {
   "version": 2,
   "builds": [
-    { "src": "backend/api/server.js", "use": "@vercel/node" }
+    { "src": "backend/api/server.js", "use": "@vercel/node" },
+    { "src": "package.json", "use": "@vercel/static-build" }
   ],
   "routes": [
     { "src": "/api/submit-form", "dest": "/backend/api/server.js" },
