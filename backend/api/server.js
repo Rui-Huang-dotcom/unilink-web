@@ -26,7 +26,7 @@ app.post("/api/submit-form", async (req, res) => {
   try {
     await transporter.sendMail({
       from: "1279276434@qq.com",
-      to: "hrvictor@gmail.com",
+      to: "bruce@unilinkletting.co.uk",
       subject: `New Form Submission from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     });
