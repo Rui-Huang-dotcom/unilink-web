@@ -4,6 +4,10 @@ const nodemailer = require("nodemailer");
 
 const app = express();
 
+require("dotenv").config();
+
+const emailPass = process.env.pass;
+
 // Middleware
 app.use(cors());
 app.use(express.json()); // Parse JSON request bodies
@@ -15,7 +19,7 @@ const transporter = nodemailer.createTransport({
   secure: true, // true for 465, false for other ports
   auth: {
     user: "1279276434@qq.com", // Your QQ email address
-    pass: "wuzgpilnqpdkhhfa", // The authorization code from QQ
+    pass: emailPass, // The authorization code from QQ
   },
 });
 
